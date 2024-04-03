@@ -22,6 +22,8 @@ const Edit = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
+  const [heading, setHeading] = useState("");
+  const [subheading, setSubheading] = useState("");
   const [link, setLink] = useState("");
   const [description, setDescription] = useState("");
   const [videourl, setVideourl] = useState("");
@@ -93,6 +95,8 @@ const Edit = () => {
         const alldata = data.data;
         setTitle(alldata._title);
         setSubtitle(alldata._subtitle);
+        setHeading(alldata._heading);
+        setSubheading(alldata._subheading);
         setLink(alldata._link);
         setVideourl(alldata._videourl);
         setPosition(alldata._sort);
@@ -137,6 +141,32 @@ const Edit = () => {
                 label="Sub Title"
                 variant="outlined"
                 onChange={(e) => setSubtitle(e.target.value)}
+                multiline
+                maxRows={10}
+                InputProps={{ style: { backgroundColor: "white" } }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                id="standard-basic"
+                fullWidth
+                name="heading"
+                value={heading}
+                label="Heading"
+                variant="outlined"
+                onChange={(e) => setHeading(e.target.value)}
+                InputProps={{ style: { backgroundColor: "white" } }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                id="standard-basic"
+                fullWidth
+                name="subheading"
+                value={subheading}
+                label="Sub Heading"
+                variant="outlined"
+                onChange={(e) => setSubheading(e.target.value)}
                 multiline
                 maxRows={10}
                 InputProps={{ style: { backgroundColor: "white" } }}
