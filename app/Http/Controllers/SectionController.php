@@ -40,6 +40,8 @@ class SectionController extends Controller
        $validator = Validator::make($request->all(), [
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['required', 'string'],
+            'heading' => ['required', 'string', 'max:255'],
+            'subheading' => ['required', 'string'],
             'description' => ['required']
         ]);
 
@@ -57,6 +59,8 @@ class SectionController extends Controller
         $profile = Section::create([
             '_title' => $request->title,
             '_subtitle' => $request->subtitle,
+            '_heading' => $request->heading,
+            '_subheading' => $request->subheading,
             '_description' => $request->description,
             '_status' => $request->status,
             '_menuid' => $request->menu,
@@ -143,6 +147,8 @@ class SectionController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['required', 'string'],
+            'heading' => ['required', 'string', 'max:255'],
+            'subtitle' => ['required', 'string'],
             'description' => ['required']
         ]);
 
@@ -160,6 +166,8 @@ class SectionController extends Controller
             $profile = Section::where('id', '=', $id)->update([
                 '_title' => $request->title,
                 '_subtitle' => $request->subtitle,
+                '_heading' => $request->heading,
+                '_subheading' => $request->subheading,
                 '_description' => $request->description,
                 '_status' => $request->status,
                 '_menuid' => $request->menu,
@@ -173,6 +181,8 @@ class SectionController extends Controller
             $profile = Section::where('id', '=', $id)->update([
                 '_title' => $request->title,
                 '_subtitle' => $request->subtitle,
+                '_heading' => $request->heading,
+                '_subheading' => $request->subheading,
                 '_description' => $request->description,
                 '_status' => $request->status,
                 '_menuid' => $request->menu,

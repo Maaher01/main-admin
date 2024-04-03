@@ -17,13 +17,25 @@ const List = () => {
       name: "Title",
       selector: (row) => row._title,
       center: true,
-      width: "250px",
+      width: "200px",
     },
     {
       name: "Sub Title",
       selector: (row) => row._subtitle,
       center: true,
-      width: "250px",
+      width: "200px",
+    },
+    {
+      name: "Heading",
+      selector: (row) => row._heading,
+      center: true,
+      width: "200px",
+    },
+    {
+      name: "Sub Heading",
+      selector: (row) => row._subheading,
+      center: true,
+      width: "200px",
     },
     {
       name: "Description",

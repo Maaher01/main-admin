@@ -12,6 +12,8 @@ class Section extends Model
     protected $fillable = [
         '_title',
         '_subtitle',
+        '_heading',
+        '_subheading',
         '_description',
         '_status',
         '_menuid',
