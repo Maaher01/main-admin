@@ -11,6 +11,8 @@ import Grid from "@mui/material/Grid";
 import Layout from "../../layout/Layout";
 import BackupIcon from "@mui/icons-material/Backup";
 import { toast } from "react-toastify";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const Add = () => {
   const navigate = useNavigate();
@@ -19,6 +21,11 @@ const Add = () => {
   const [menulist, setMenulist] = useState([]);
   const [imageUrl, setImageUrl] = useState(null);
   const [img, setImg] = useState(null);
+  const [description, setDescription] = useState("");
+
+  const handleChangeDescription = (value) => {
+    setDescription(value);
+  };
 
   const handleChangestatus = (event) => {
     setStatus(event.target.value);
@@ -154,7 +161,7 @@ const Add = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <TextField
                 id="standard-basic"
                 fullWidth
@@ -164,6 +171,13 @@ const Add = () => {
                 multiline
                 maxRows={10}
                 InputProps={{ style: { backgroundColor: "white" } }}
+              />
+            </Grid> */}
+
+            <Grid item xs={12}>
+              <ReactQuill
+                value={description}
+                onChange={handleChangeDescription}
               />
             </Grid>
 

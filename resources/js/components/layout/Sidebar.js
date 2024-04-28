@@ -19,6 +19,7 @@ import FeedIcon from "@mui/icons-material/Feed";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 import SegmentIcon from "@mui/icons-material/Segment";
+import ShareIcon from "@mui/icons-material/Share";
 const drawerWidth = 230;
 
 const ClippedDrawer = () => {
@@ -315,7 +316,7 @@ const ClippedDrawer = () => {
               </ListItem>
             </Link>
 
-            <Link
+            {/* <Link
               style={{
                 textDecoration: "none",
                 color: "rgba(44, 56, 74, .681)",
@@ -330,9 +331,9 @@ const ClippedDrawer = () => {
                   <ListItemText primary={"Counters"} />
                 </ListItemButton>
               </ListItem>
-            </Link>
+            </Link> */}
 
-            <Link
+            {/* <Link
               style={{
                 textDecoration: "none",
                 color: "rgba(44, 56, 74, .681)",
@@ -347,9 +348,9 @@ const ClippedDrawer = () => {
                   <ListItemText primary={"Recent Visas"} />
                 </ListItemButton>
               </ListItem>
-            </Link>
+            </Link> */}
 
-            {/* <Link
+            <Link
               style={{
                 textDecoration: "none",
                 color: "rgba(44, 56, 74, .681)",
@@ -364,7 +365,7 @@ const ClippedDrawer = () => {
                   <ListItemText primary={"Social Link"} />
                 </ListItemButton>
               </ListItem>
-            </Link> */}
+            </Link>
 
             {/* <Link
               style={{
